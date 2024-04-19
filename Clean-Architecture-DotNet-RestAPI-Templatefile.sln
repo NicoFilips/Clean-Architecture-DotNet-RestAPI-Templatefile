@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "Integra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".template.config", ".template.config", "{5DD0502A-F67F-441D-A989-E29AF3766B8D}"
 	ProjectSection(SolutionItems) = preProject
-		template.json = template.json
+		template.json = .template.config\template.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.API.Client.IntegrationTests", "tests\Web.API.Client.IntegrationTests\Web.API.Client.IntegrationTests.csproj", "{53DE5F62-006D-43D8-8E1A-068EF5145AAF}"

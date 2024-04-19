@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "",
-  "classifications": ["Web", "API", "DDD"],
+  "classifications": ["Web", "API", "Clean-Architecture","REST"],
   "identity": "",
   "name": "Clean-Architecture-DotNet-RestAPI-Templatefile",
   "shortName": "RestAPI-Template",
