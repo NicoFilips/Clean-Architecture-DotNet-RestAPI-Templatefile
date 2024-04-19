@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Clean-Architecture-DotNet-RestAPI-Templatefile.Web.API</PackageId>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Carter" Version="6.1.1"/>
+    <PackageReference Include="Mapster" Version="7.4.0"/>
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1"/>
+    <PackageReference Include="MediatR" Version="12.2.0"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj"/>
+    <ProjectReference Include="..\Domain\Domain.csproj"/>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj"/>
+    <ProjectReference Include="..\Web.API.Contracts\Web.API.Contracts.csproj"/>
+  </ItemGroup>
+
+</Project>

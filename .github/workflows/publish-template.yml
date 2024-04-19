@@ -1,0 +1,50 @@
+name: Release Project Template
+
+on:
+  push:
+    branches:
+      - main  # oder der Branch Ihrer Wahl
+  workflow_dispatch:  # ermöglicht manuelles Auslösen
+
+jobs:
+  build:
+    runs-on: windows-latest  # wichtig, da wir mit Visual Studio arbeiten
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '8.0.x'  # oder Ihre .NET-Version
+
+    - name: Restore Dependencies
+      run: dotnet restore
+
+    - name: Build Solution
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Package Template
+      run: |
+        Compress-Archive -Path ./ -DestinationPath ./template.zip
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.run_number }}
+        release_name: Release ${{ github.run_number }}
+        draft: false
+        prerelease: false
+        body: "Release of new version of the project template."
+
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./template.zip
+        asset_name: template.zip
+        asset_content_type: application/zip

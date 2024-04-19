@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "",
+  "classifications": ["Web", "API", "DDD"],
+  "identity": "",
+  "name": "Clean-Architecture-DotNet-RestAPI-Templatefile",
+  "shortName": "RestAPI-Template",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Clean-Architecture-DotNet-RestAPI-Templatefile",
+  "preferNameDirectory": true,
+  "symbols": {
+    "company": {
+      "type": "",
+      "replaces": "",
+      "defaultValue": "",
+      "description": ""
+    },
+    "projectName": {
+      "type": "",
+      "replaces": "",
+      "defaultValue": "",
+      "description": ""
+    }
+  }
+}

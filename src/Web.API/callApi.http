@@ -1,0 +1,7 @@
+### GET https Domain Entity
+GET https://localhost:5114/domain-entity
+Accept: application/json
+
+### GET http Domain Entity
+GET https://localhost:5113/domain-entity
+Accept: application/json

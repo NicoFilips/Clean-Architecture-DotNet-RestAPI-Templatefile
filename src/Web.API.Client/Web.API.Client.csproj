@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageId>Clean-Architecture-DotNet-RestAPI-Templatefile.Web.API.Client</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="TypedRest" Version="1.5.2" />
+      <PackageReference Include="TypedRest.SystemTextJson" Version="1.5.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Web.API.Contracts\Web.API.Contracts.csproj" />
+    </ItemGroup>
+
+</Project>
